@@ -6,8 +6,9 @@ export default function Page() {
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 			<h1>/page1</h1>
-			<Text onPress={() => { router.push('/page2'); }}>Go to /page2, which should redirect to /page3, but fails</Text>
-			<Text onPress={() => { router.push('/page4'); }}>Go to /page4, which successfully redirects to /page5</Text>
+			<Text onPress={() => { router.push('/page2'); }}>Go to /page3, via redirect from /page2 - FAILS</Text>
+			<Text onPress={() => { router.push('/page3'); }}>Go to /page3, directly - WORKS</Text>
+			<Text onPress={() => { router.push('/page4'); }}>Go to /page5, via redirect from /page4 - WORKS</Text>
 		</View>
 	);
 }
